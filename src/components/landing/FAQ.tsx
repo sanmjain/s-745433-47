@@ -1,6 +1,7 @@
+
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Plus, Minus, Clock, DollarSign, Shield, Zap, Users, Wrench, Package, Award } from "lucide-react";
+import { Plus, Minus, Clock, DollarSign, Shield, Zap, Users, Settings, Smartphone, Award } from "lucide-react";
 import { Card } from "@/components/ui/card";
 
 const FAQ = () => {
@@ -17,58 +18,58 @@ const FAQ = () => {
   const faqs = [
     {
       icon: Clock,
-      question: "How long does it take to complete a project?",
-      answer: "Project timelines vary based on complexity. Simple websites take 2-4 weeks, web applications 6-12 weeks, and mobile apps 8-16 weeks. We provide detailed timelines during our initial consultation.",
-      category: "Timeline"
+      question: "How quickly can we implement CampusNex?",
+      answer: "Most institutions are up and running within 2-4 weeks. We provide full data migration, staff training, and 24/7 support during the transition. Our implementation team works with you to ensure a smooth rollout.",
+      category: "Implementation"
     },
     {
       icon: DollarSign,
-      question: "What are your pricing ranges?",
-      answer: "Business websites start from $2,500, web applications from $8,000, mobile apps from $15,000, and UI/UX design from $3,000. Final pricing depends on features, complexity, and timeline requirements.",
+      question: "What does CampusNex cost?",
+      answer: "Pricing starts from $99/month for small schools (up to 500 students) and scales based on institution size and features needed. We offer flexible payment plans and special discounts for educational institutions. Contact us for a custom quote.",
       category: "Pricing"
     },
     {
       icon: Shield,
-      question: "Do you provide ongoing support and maintenance?",
-      answer: "Yes! We offer comprehensive support packages including security updates, performance monitoring, content updates, and technical support. Our maintenance plans start from $200/month.",
-      category: "Support"
+      question: "Is student data secure with CampusNex?",
+      answer: "Absolutely. We use bank-level encryption, regular security audits, and comply with FERPA and other educational privacy regulations. Your data is hosted on secure cloud servers with 99.9% uptime guarantee and daily backups.",
+      category: "Security"
     },
     {
-      icon: Zap,
-      question: "What technologies do you use?",
-      answer: "We use modern, proven technologies including React, Node.js, TypeScript, Python, AWS, and mobile-native development. We choose the best tech stack for each project's specific needs.",
-      category: "Technical"
+      icon: Smartphone,
+      question: "Can parents and students access CampusNex on mobile?",
+      answer: "Yes! CampusNex includes dedicated mobile apps for students and parents. They can view grades, attendance, fee status, announcements, and communicate with teachers directly from their smartphones.",
+      category: "Mobile"
     },
     {
       icon: Users,
-      question: "Do you work with startups or only established companies?",
-      answer: "We work with businesses of all sizes, from early-stage startups to enterprise companies. We offer flexible payment plans and scaled solutions to match your budget and growth stage.",
-      category: "Business"
+      question: "Do you provide training for our staff?",
+      answer: "Yes, we provide comprehensive training including live webinars, video tutorials, user manuals, and dedicated support during the first month. We also offer ongoing training sessions for new staff members.",
+      category: "Training"
     },
     {
-      icon: Wrench,
-      question: "Can you help with existing projects or only new builds?",
-      answer: "We can both build from scratch and improve existing applications. Our services include code audits, performance optimization, feature additions, and complete redesigns of existing systems.",
-      category: "Support"
+      icon: Settings,
+      question: "Can CampusNex be customized for our institution?",
+      answer: "Absolutely! CampusNex is highly customizable. We can adapt workflows, add custom fields, integrate with your existing systems, and even develop specific features for your institution's unique requirements.",
+      category: "Customization"
     },
     {
-      icon: Package,
-      question: "What's included in the project cost?",
-      answer: "All projects include design, development, testing, deployment, training, and 3 months of free support. We also provide project documentation, source code, and deployment guides.",
-      category: "Pricing"
+      icon: Zap,
+      question: "What happens to our existing data?",
+      answer: "We handle complete data migration from your current system at no extra cost. Our team ensures all student records, financial data, and academic information is safely transferred and verified before going live.",
+      category: "Migration"
     },
     {
       icon: Award,
-      question: "How do you ensure project quality?",
-      answer: "We follow industry best practices including code reviews, automated testing, security audits, and performance optimization. Every project goes through multiple quality assurance phases.",
-      category: "Quality"
+      question: "What kind of support do you provide?",
+      answer: "We offer 24/7 technical support via phone, email, and live chat. Every client gets a dedicated account manager, free software updates, and access to our knowledge base and training resources.",
+      category: "Support"
     }
   ];
 
   return (
     <section className="py-24 bg-gradient-to-br from-neutral-50 to-white relative overflow-hidden">
-      <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-accent-blue/5 rounded-full blur-3xl"></div>
-      <div className="absolute bottom-1/4 right-1/4 w-64 h-64 bg-accent-purple/5 rounded-full blur-3xl"></div>
+      <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-campus-blue/5 rounded-full blur-3xl"></div>
+      <div className="absolute bottom-1/4 right-1/4 w-64 h-64 bg-campus-green/5 rounded-full blur-3xl"></div>
       
       <div className="container-padding relative z-10">
         <motion.div 
@@ -78,13 +79,14 @@ const FAQ = () => {
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
         >
-          <span className="bg-accent-blue/10 text-accent-blue px-4 py-1.5 rounded-full text-sm font-medium">
+          <span className="bg-campus-blue/10 text-campus-blue px-6 py-2 rounded-full text-sm font-bold">
             FREQUENTLY ASKED QUESTIONS
           </span>
-          <h2 className="heading-lg mt-6">Everything You Need to Know</h2>
-          <p className="text-neutral-600 mt-4 max-w-2xl mx-auto">
-            Get answers to common questions about our services, pricing, and process. 
-            Can't find what you're looking for? Contact us directly.
+          <h2 className="text-4xl font-bold mt-8 mb-6 gradient-text">
+            Get Answers to Your Questions
+          </h2>
+          <p className="text-xl text-campus-gray max-w-3xl mx-auto">
+            Everything you need to know about CampusNex ERP software for educational institutions
           </p>
         </motion.div>
 
@@ -98,30 +100,30 @@ const FAQ = () => {
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 viewport={{ once: true }}
               >
-                <Card className="glass-panel border border-white/30 overflow-hidden">
+                <Card className="glass-panel border border-white/30 overflow-hidden hover:shadow-lg transition-all duration-300">
                   <button
                     onClick={() => toggleItem(index)}
                     className="w-full p-6 text-left hover:bg-neutral-50/50 transition-colors"
                   >
                     <div className="flex items-center justify-between">
                       <div className="flex items-center gap-4">
-                        <div className="w-10 h-10 bg-gradient-to-br from-accent-purple/20 to-accent-blue/20 rounded-full flex items-center justify-center">
-                          <faq.icon className="w-5 h-5 text-accent-purple" />
+                        <div className="w-12 h-12 bg-gradient-to-br from-campus-blue/20 to-campus-green/20 rounded-full flex items-center justify-center">
+                          <faq.icon className="w-6 h-6 text-campus-blue" />
                         </div>
                         <div>
-                          <h3 className="font-semibold text-lg text-primary">
+                          <h3 className="font-bold text-xl text-campus-primary">
                             {faq.question}
                           </h3>
-                          <span className="text-xs text-accent-blue bg-accent-blue/10 px-2 py-1 rounded-full">
+                          <span className="text-xs text-campus-blue bg-campus-blue/10 px-3 py-1 rounded-full font-medium">
                             {faq.category}
                           </span>
                         </div>
                       </div>
                       <div className="flex-shrink-0 ml-4">
                         {openItems.includes(index) ? (
-                          <Minus className="w-5 h-5 text-accent-purple" />
+                          <Minus className="w-6 h-6 text-campus-green" />
                         ) : (
-                          <Plus className="w-5 h-5 text-neutral-400" />
+                          <Plus className="w-6 h-6 text-campus-gray" />
                         )}
                       </div>
                     </div>
@@ -137,7 +139,7 @@ const FAQ = () => {
                       >
                         <div className="px-6 pb-6">
                           <div className="border-t border-neutral-200 pt-4">
-                            <p className="text-neutral-600 leading-relaxed">
+                            <p className="text-campus-gray leading-relaxed text-lg">
                               {faq.answer}
                             </p>
                           </div>
@@ -150,31 +152,31 @@ const FAQ = () => {
             ))}
           </div>
 
-          {/* CTA after FAQ */}
+          {/* Strong CTA after FAQ */}
           <motion.div
-            className="text-center mt-12"
+            className="text-center mt-16"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
           >
-            <Card className="glass-panel p-8 rounded-3xl">
-              <h3 className="text-xl font-semibold mb-4">Still have questions?</h3>
-              <p className="text-neutral-600 mb-6">
-                Our team is here to help. Get a free consultation and detailed project proposal.
+            <Card className="bg-gradient-to-r from-campus-blue to-campus-green p-12 rounded-3xl text-white">
+              <h3 className="text-3xl font-bold mb-4">Still Have Questions?</h3>
+              <p className="text-xl mb-8 opacity-90">
+                Get all your questions answered in a free consultation with our ERP experts
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <button 
                   onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
-                  className="button-primary"
+                  className="bg-white text-campus-blue px-10 py-4 rounded-2xl font-bold text-lg hover:shadow-xl transition-all duration-300"
                 >
-                  Get Free Consultation
+                  Schedule Free Consultation
                 </button>
                 <button 
                   onClick={() => window.open('tel:+15551234567')}
-                  className="button-secondary"
+                  className="bg-transparent border-2 border-white text-white px-10 py-4 rounded-2xl font-bold text-lg hover:bg-white hover:text-campus-blue transition-all duration-300"
                 >
-                  Call Us: +1 (555) 123-4567
+                  Call: +1 (555) 123-4567
                 </button>
               </div>
             </Card>

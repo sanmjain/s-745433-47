@@ -1,6 +1,6 @@
 
 import { motion } from "framer-motion";
-import { ArrowRight, Users, BookOpen, BarChart3, Shield } from "lucide-react";
+import { ArrowRight, Users, BookOpen, BarChart3, Shield, Zap, Clock } from "lucide-react";
 
 const Hero = () => {
   const scrollToSection = (sectionId: string) => {
@@ -17,10 +17,10 @@ const Hero = () => {
     { icon: Shield, delay: 1.5, position: "bottom-20 right-20" }
   ];
 
-  const stats = [
-    { number: "500+", label: "Institutions Served" },
-    { number: "100K+", label: "Students Managed" },
-    { number: "99.9%", label: "Uptime" }
+  const keyBenefits = [
+    { icon: Zap, text: "Instant Setup", color: "text-campus-blue" },
+    { icon: Clock, text: "Save 20+ Hours/Week", color: "text-campus-green" },
+    { icon: Shield, text: "100% Secure", color: "text-campus-cyan" }
   ];
 
   return (
@@ -55,96 +55,89 @@ const Hero = () => {
 
       {/* Hero content */}
       <div className="max-w-6xl mx-auto text-center relative z-10 pt-20">
-        {/* Badge */}
+        {/* Attention-grabbing badge */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           className="mb-6"
         >
-          <span className="inline-flex items-center gap-2 bg-gradient-to-r from-campus-blue to-campus-green text-white px-6 py-2 rounded-full text-sm font-medium shadow-lg">
-            <Shield className="w-4 h-4" />
-            Trusted Educational ERP Platform
+          <span className="inline-flex items-center gap-2 bg-gradient-to-r from-campus-blue to-campus-green text-white px-8 py-3 rounded-full text-sm font-bold shadow-lg animate-pulse">
+            <Zap className="w-5 h-5" />
+            #1 ERP Software for Educational Institutions
           </span>
         </motion.div>
 
-        {/* Heading */}
+        {/* Powerful Heading */}
         <motion.h1 
-          className="heading-xl mb-8 gradient-text"
+          className="text-5xl md:text-7xl font-bold mb-6 gradient-text leading-tight"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
         >
-          Smart ERP Platform for Modern Campuses
+          Transform Your Campus with 
+          <span className="block text-campus-blue">CampusNex ERP</span>
         </motion.h1>
 
-        {/* Description */}
+        {/* Compelling Description */}
         <motion.p 
-          className="text-xl text-campus-gray mb-12 max-w-3xl mx-auto leading-relaxed"
+          className="text-2xl text-campus-gray mb-8 max-w-4xl mx-auto leading-relaxed font-medium"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.4 }}
         >
-          Manage admissions, academics, finance, and more – all in one comprehensive dashboard. 
-          Streamline your institution's operations with our intelligent ERP solution.
+          Stop wasting time on paperwork. Automate admissions, attendance, fees, and academics 
+          in one powerful platform. <span className="text-campus-green font-bold">Trusted by 500+ institutions.</span>
         </motion.p>
 
-        {/* Stats Section */}
+        {/* Key Benefits */}
         <motion.div 
           className="flex flex-wrap justify-center gap-8 mb-12"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.6 }}
         >
-          {stats.map((stat, index) => (
-            <div key={stat.label} className="glass-panel px-6 py-4 rounded-2xl">
-              <div className="text-2xl font-bold text-campus-blue mb-1">{stat.number}</div>
-              <div className="text-sm text-campus-gray">{stat.label}</div>
+          {keyBenefits.map((benefit, index) => (
+            <div key={benefit.text} className="glass-panel px-6 py-4 rounded-2xl flex items-center gap-3">
+              <benefit.icon className={`w-6 h-6 ${benefit.color}`} />
+              <span className="font-semibold text-campus-primary">{benefit.text}</span>
             </div>
           ))}
         </motion.div>
 
-        {/* CTAs */}
+        {/* Strong CTAs */}
         <motion.div 
-          className="flex flex-col sm:flex-row justify-center gap-4 mb-8"
+          className="flex flex-col sm:flex-row justify-center gap-6 mb-8"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.8 }}
         >
           <button 
             onClick={() => scrollToSection('contact')}
-            className="button-primary"
+            className="bg-gradient-to-r from-campus-blue to-campus-green text-white px-10 py-5 rounded-2xl font-bold text-lg hover:shadow-2xl transition-all duration-300 hover:scale-105 flex items-center justify-center gap-3"
           >
-            Schedule a Demo
-            <ArrowRight className="w-5 h-5 ml-2" />
+            Get FREE Demo Now
+            <ArrowRight className="w-6 h-6" />
           </button>
           <button 
             onClick={() => scrollToSection('features')}
-            className="button-secondary"
+            className="bg-white text-campus-primary px-10 py-5 rounded-2xl font-bold text-lg border-2 border-campus-blue hover:bg-campus-blue hover:text-white transition-all duration-300 flex items-center justify-center gap-3"
           >
-            Explore Features
-            <ArrowRight className="w-5 h-5 ml-2" />
+            See Features
+            <ArrowRight className="w-6 h-6" />
           </button>
         </motion.div>
 
-        {/* Trust Indicators */}
+        {/* Urgency Indicator */}
         <motion.div
-          className="flex flex-wrap justify-center items-center gap-6 text-sm text-campus-gray"
+          className="inline-block bg-gradient-to-r from-campus-green/10 to-campus-blue/10 border-2 border-campus-green/30 rounded-xl px-8 py-4"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.8, delay: 1 }}
         >
-          <div className="flex items-center gap-2">
-            <div className="w-2 h-2 bg-campus-green rounded-full animate-pulse"></div>
-            Cloud-based Solution
-          </div>
-          <div className="flex items-center gap-2">
-            <div className="w-2 h-2 bg-campus-blue rounded-full animate-pulse"></div>
-            Mobile & Web Access
-          </div>
-          <div className="flex items-center gap-2">
-            <div className="w-2 h-2 bg-campus-cyan rounded-full animate-pulse"></div>
-            Free Demo Available
+          <div className="flex items-center justify-center gap-4 text-campus-green font-bold">
+            <div className="w-3 h-3 bg-campus-green rounded-full animate-pulse"></div>
+            <span>Free Demo Available • No Credit Card Required • Setup in 24 Hours</span>
           </div>
         </motion.div>
       </div>
