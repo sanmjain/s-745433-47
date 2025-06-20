@@ -10,6 +10,7 @@ import StickyContact from "@/components/landing/StickyContact";
 import FAQ from "@/components/landing/FAQ";
 import MobileContact from "@/components/landing/MobileContact";
 import AccessibleNavigation from "@/components/landing/AccessibleNavigation";
+import WhatsAppWidget from "@/components/landing/WhatsAppWidget";
 
 const Index = () => {
   return (
@@ -29,6 +30,7 @@ const Index = () => {
       <Footer />
       <StickyContact />
       <MobileContact />
+      <WhatsAppWidget />
     </div>
   );
 };

@@ -44,17 +44,10 @@ export default {
           800: "#334155",
         },
         accent: {
-          blue: "#0ea5e9",
+          purple: "#8b5cf6",
+          blue: "#3b82f6",
           green: "#10b981",
           cyan: "#06b6d4",
-        },
-        campus: {
-          primary: "#1e293b",
-          blue: "#0ea5e9",
-          green: "#10b981",
-          cyan: "#06b6d4",
-          gray: "#64748b",
-          light: "#f8fafc",
         },
       },
       fontFamily: {
