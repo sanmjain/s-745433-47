@@ -1,54 +1,54 @@
 
 import { motion } from "framer-motion";
 import { Card } from "@/components/ui/card";
-import { Clock, Shield, Users, Zap, Award, Headphones } from "lucide-react";
+import { Smartphone, Shield, Zap, Users, Settings, Headphones } from "lucide-react";
 
 const WhyChooseUs = () => {
   const reasons = [
     {
-      icon: Clock,
-      title: "Fast 24-hour Response Time",
-      description: "We understand urgency in business. Get quick responses to all your queries and project updates.",
-      color: "from-blue-500 to-cyan-500"
+      icon: Smartphone,
+      title: "Mobile-First Design",
+      description: "Access CampusNex from any device, anywhere. Our responsive design ensures seamless experience across all platforms.",
+      color: "from-campus-blue to-campus-cyan"
     },
     {
       icon: Shield,
-      title: "Free Consultation & Quotes",
-      description: "No hidden costs. Get detailed project estimates and expert consultation at no charge.",
-      color: "from-green-500 to-emerald-500"
+      title: "Privacy-First Approach",
+      description: "Your data is secure with enterprise-grade encryption and compliance with educational data protection standards.",
+      color: "from-campus-green to-campus-blue"
     },
     {
-      icon: Users,
-      title: "Experienced Development Team",
-      description: "Our skilled developers have years of experience in cutting-edge technologies and best practices.",
-      color: "from-purple-500 to-violet-500"
+      icon: Settings,
+      title: "Fully Customizable",
+      description: "Adapt CampusNex to your institution's unique needs with flexible configurations and custom workflows.",
+      color: "from-campus-cyan to-campus-green"
     },
     {
       icon: Headphones,
-      title: "Ongoing Support & Maintenance",
-      description: "We don't just build and leave. Continuous support ensures your applications run smoothly.",
-      color: "from-orange-500 to-red-500"
+      title: "24/7 Fast Support",
+      description: "Get help when you need it with our dedicated support team available round the clock.",
+      color: "from-campus-primary to-campus-blue"
     },
     {
       icon: Zap,
-      title: "Competitive Pricing",
-      description: "Quality development services at fair, transparent pricing that fits your budget.",
-      color: "from-yellow-500 to-orange-500"
+      title: "Seamless Migration",
+      description: "Switch from your current system effortlessly with our expert migration team and comprehensive data transfer.",
+      color: "from-campus-green to-campus-cyan"
     },
     {
-      icon: Award,
-      title: "Quality Assurance",
-      description: "Rigorous testing and quality checks ensure your project meets the highest standards.",
-      color: "from-pink-500 to-rose-500"
+      icon: Users,
+      title: "User-Friendly Interface",
+      description: "Intuitive design that requires minimal training. Get your staff up and running quickly with our easy-to-use platform.",
+      color: "from-campus-blue to-campus-green"
     }
   ];
 
   return (
-    <section className="py-24 bg-gradient-to-br from-neutral-50 via-white to-neutral-100 relative overflow-hidden">
+    <section className="py-24 bg-gradient-to-br from-campus-light via-white to-neutral-100 relative overflow-hidden">
       {/* Enhanced background elements */}
       <div className="absolute top-0 left-0 w-full h-full">
-        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-gradient-to-r from-accent-blue/10 to-accent-purple/10 rounded-full blur-3xl opacity-50"></div>
-        <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-gradient-to-r from-accent-purple/10 to-accent-green/10 rounded-full blur-3xl opacity-50"></div>
+        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-gradient-to-r from-campus-blue/10 to-campus-green/10 rounded-full blur-3xl opacity-50"></div>
+        <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-gradient-to-r from-campus-green/10 to-campus-cyan/10 rounded-full blur-3xl opacity-50"></div>
       </div>
       
       <div className="container-padding relative z-10">
@@ -59,14 +59,14 @@ const WhyChooseUs = () => {
             transition={{ duration: 0.5 }}
             viewport={{ once: true }}
           >
-            <span className="bg-gradient-to-r from-accent-purple to-accent-blue bg-clip-text text-transparent px-6 py-2 rounded-full text-sm font-semibold border border-accent-purple/20 backdrop-blur-sm">
-              WHY CHOOSE NEXMIZE
+            <span className="bg-gradient-to-r from-campus-blue to-campus-green bg-clip-text text-transparent px-6 py-2 rounded-full text-sm font-semibold border border-campus-blue/20 backdrop-blur-sm">
+              WHY CHOOSE CAMPUSNEX
             </span>
-            <h2 className="heading-lg mt-8 mb-6 bg-gradient-to-r from-neutral-900 to-neutral-700 bg-clip-text text-transparent">
-              We Make the Difference
+            <h2 className="heading-lg mt-8 mb-6 bg-gradient-to-r from-campus-primary to-campus-gray bg-clip-text text-transparent">
+              Built for Educational Excellence
             </h2>
-            <p className="text-neutral-600 max-w-3xl mx-auto text-lg leading-relaxed">
-              Partner with Nexmize for exceptional digital solutions backed by expertise, reliability, and unwavering commitment to your success.
+            <p className="text-campus-gray max-w-3xl mx-auto text-lg leading-relaxed">
+              CampusNex is designed specifically for educational institutions, offering features and capabilities that understand the unique needs of schools and colleges.
             </p>
           </motion.div>
         </div>
@@ -93,16 +93,16 @@ const WhyChooseUs = () => {
                 
                 {/* Content */}
                 <div className="relative z-10">
-                  <h3 className="text-xl font-bold mb-4 text-neutral-900 group-hover:text-neutral-800 transition-colors">
+                  <h3 className="text-xl font-bold mb-4 text-campus-primary group-hover:text-campus-primary transition-colors">
                     {reason.title}
                   </h3>
-                  <p className="text-neutral-600 leading-relaxed group-hover:text-neutral-700 transition-colors">
+                  <p className="text-campus-gray leading-relaxed group-hover:text-campus-gray transition-colors">
                     {reason.description}
                   </p>
                 </div>
 
                 {/* Hover effect border */}
-                <div className="absolute inset-0 rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-gradient-to-r from-accent-purple/20 via-transparent to-accent-blue/20 p-[1px]">
+                <div className="absolute inset-0 rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-gradient-to-r from-campus-blue/20 via-transparent to-campus-green/20 p-[1px]">
                   <div className="w-full h-full rounded-3xl bg-white/90"></div>
                 </div>
               </Card>
@@ -118,7 +118,7 @@ const WhyChooseUs = () => {
           transition={{ duration: 0.5, delay: 0.6 }}
           viewport={{ once: true }}
         >
-          <div className="relative backdrop-blur-xl bg-gradient-to-r from-accent-purple via-accent-blue to-accent-purple p-10 rounded-3xl text-white shadow-2xl overflow-hidden">
+          <div className="relative backdrop-blur-xl bg-gradient-to-r from-campus-blue via-campus-green to-campus-cyan p-10 rounded-3xl text-white shadow-2xl overflow-hidden">
             {/* Background pattern */}
             <div className="absolute inset-0 opacity-10">
               <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-white/20 to-transparent"></div>
@@ -126,10 +126,10 @@ const WhyChooseUs = () => {
             
             <div className="relative z-10">
               <h3 className="text-3xl font-bold mb-4 text-shadow">
-                Ready to Experience the Nexmize Difference?
+                Ready to Transform Your Institution?
               </h3>
               <p className="text-xl mb-8 opacity-95 max-w-2xl mx-auto leading-relaxed">
-                Join our growing list of satisfied clients and transform your digital presence today.
+                Join hundreds of educational institutions that have streamlined their operations with CampusNex.
               </p>
               <button 
                 onClick={() => {
@@ -138,9 +138,9 @@ const WhyChooseUs = () => {
                     element.scrollIntoView({ behavior: 'smooth' });
                   }
                 }}
-                className="bg-white text-accent-purple px-10 py-4 rounded-2xl font-bold hover:bg-neutral-50 transition-all duration-300 shadow-xl hover:shadow-2xl hover:scale-105 text-lg"
+                className="bg-white text-campus-blue px-10 py-4 rounded-2xl font-bold hover:bg-campus-light transition-all duration-300 shadow-xl hover:shadow-2xl hover:scale-105 text-lg"
               >
-                Start Your Project Now
+                Schedule Your Demo Today
               </button>
             </div>
           </div>

@@ -1,27 +1,27 @@
 
 import { motion } from "framer-motion";
-import { Star, Users, Award, Clock } from "lucide-react";
+import { Users, Award, Clock, Shield } from "lucide-react";
 
 const TrustedBy = () => {
   const trustMetrics = [
-    { icon: Star, value: "4.9/5", label: "Client Rating", color: "text-yellow-500" },
-    { icon: Users, value: "25+", label: "Happy Clients", color: "text-blue-500" },
-    { icon: Award, value: "50+", label: "Projects Completed", color: "text-green-500" },
-    { icon: Clock, value: "24h", label: "Response Time", color: "text-purple-500" }
+    { icon: Users, value: "500+", label: "Institutions", color: "text-campus-blue" },
+    { icon: Award, value: "100K+", label: "Students", color: "text-campus-green" },
+    { icon: Clock, value: "99.9%", label: "Uptime", color: "text-campus-cyan" },
+    { icon: Shield, value: "24/7", label: "Support", color: "text-campus-primary" }
   ];
 
-  const companies = [
-    { name: "Tech Startup A", className: "w-32 h-12", logo: "TS" },
-    { name: "Digital Agency B", className: "w-32 h-12", logo: "DA" },
-    { name: "E-commerce Co", className: "w-32 h-12", logo: "EC" },
-    { name: "Mobile Solutions", className: "w-32 h-12", logo: "MS" }
+  const institutions = [
+    { name: "St. Mary's School", className: "w-32 h-12", logo: "SMS" },
+    { name: "Tech University", className: "w-32 h-12", logo: "TU" },
+    { name: "Global Academy", className: "w-32 h-12", logo: "GA" },
+    { name: "Metro College", className: "w-32 h-12", logo: "MC" }
   ];
 
   return (
-    <section className="py-24 bg-gradient-to-r from-neutral-50 via-white to-neutral-50 relative overflow-hidden">
+    <section className="py-24 bg-gradient-to-r from-campus-light via-white to-campus-light relative overflow-hidden">
       {/* Background Elements */}
-      <div className="absolute top-1/2 left-1/4 w-64 h-64 bg-accent-blue/5 rounded-full blur-3xl"></div>
-      <div className="absolute top-1/2 right-1/4 w-64 h-64 bg-accent-purple/5 rounded-full blur-3xl"></div>
+      <div className="absolute top-1/2 left-1/4 w-64 h-64 bg-campus-blue/5 rounded-full blur-3xl"></div>
+      <div className="absolute top-1/2 right-1/4 w-64 h-64 bg-campus-green/5 rounded-full blur-3xl"></div>
       
       <div className="container-padding relative z-10">
         {/* Trust Metrics */}
@@ -44,8 +44,8 @@ const TrustedBy = () => {
               <div className={`w-12 h-12 ${metric.color} bg-current/10 rounded-full flex items-center justify-center mx-auto mb-3 group-hover:scale-110 transition-transform`}>
                 <metric.icon className={`w-6 h-6 ${metric.color}`} />
               </div>
-              <div className="text-2xl font-bold text-primary mb-1">{metric.value}</div>
-              <div className="text-sm text-neutral-600">{metric.label}</div>
+              <div className="text-2xl font-bold text-campus-primary mb-1">{metric.value}</div>
+              <div className="text-sm text-campus-gray">{metric.label}</div>
             </motion.div>
           ))}
         </motion.div>
@@ -58,11 +58,11 @@ const TrustedBy = () => {
           transition={{ duration: 0.6, delay: 0.2 }}
           viewport={{ once: true }}
         >
-          <h2 className="text-2xl font-bold text-primary mb-3">Trusted by Growing Businesses</h2>
-          <p className="text-neutral-600">Join our community of successful clients who've transformed their digital presence</p>
+          <h2 className="text-2xl font-bold text-campus-primary mb-3">Trusted by Educational Institutions</h2>
+          <p className="text-campus-gray">Join hundreds of schools and colleges that have transformed their operations with CampusNex</p>
         </motion.div>
 
-        {/* Company Logos */}
+        {/* Institution Logos */}
         <motion.div 
           className="flex flex-wrap justify-center items-center gap-8"
           initial={{ opacity: 0, y: 20 }}
@@ -70,18 +70,18 @@ const TrustedBy = () => {
           transition={{ duration: 0.6, delay: 0.4 }}
           viewport={{ once: true }}
         >
-          {companies.map((company, index) => (
+          {institutions.map((institution, index) => (
             <motion.div
-              key={company.name}
-              className={`${company.className} glass-panel rounded-xl flex items-center justify-center group hover:shadow-lg transition-all duration-300 cursor-pointer`}
+              key={institution.name}
+              className={`${institution.className} glass-panel rounded-xl flex items-center justify-center group hover:shadow-lg transition-all duration-300 cursor-pointer`}
               whileHover={{ scale: 1.05 }}
               initial={{ opacity: 0, scale: 0.8 }}
               whileInView={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
               viewport={{ once: true }}
             >
-              <div className="text-xl font-bold text-neutral-400 group-hover:text-accent-purple transition-colors">
-                {company.logo}
+              <div className="text-xl font-bold text-campus-gray group-hover:text-campus-blue transition-colors">
+                {institution.logo}
               </div>
             </motion.div>
           ))}
@@ -95,7 +95,7 @@ const TrustedBy = () => {
           transition={{ duration: 0.6, delay: 0.6 }}
           viewport={{ once: true }}
         >
-          <p className="text-neutral-600 mb-4">Ready to join our success stories?</p>
+          <p className="text-campus-gray mb-4">Ready to transform your institution?</p>
           <button 
             onClick={() => {
               const element = document.getElementById('contact');
@@ -103,9 +103,9 @@ const TrustedBy = () => {
                 element.scrollIntoView({ behavior: 'smooth' });
               }
             }}
-            className="bg-gradient-to-r from-accent-purple to-accent-blue text-white px-6 py-3 rounded-xl font-medium hover:shadow-lg transition-all duration-300"
+            className="button-primary"
           >
-            Get Your Free Quote
+            Get Your Free Demo
           </button>
         </motion.div>
       </div>

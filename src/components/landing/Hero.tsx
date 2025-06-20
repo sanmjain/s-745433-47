@@ -1,10 +1,8 @@
+
 import { motion } from "framer-motion";
-import { ArrowRight, Code, Smartphone, Palette, Zap } from "lucide-react";
-import { usePersonalization } from "@/hooks/usePersonalization";
+import { ArrowRight, Users, BookOpen, BarChart3, Shield } from "lucide-react";
 
 const Hero = () => {
-  const { updatePreferences, preferences } = usePersonalization();
-
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
     if (element) {
@@ -12,39 +10,26 @@ const Hero = () => {
     }
   };
 
-  const handleIndustrySelect = (industry: string) => {
-    updatePreferences({ industry });
-  };
-
   const floatingIcons = [
-    { icon: Code, delay: 0, position: "top-20 left-20" },
-    { icon: Smartphone, delay: 0.5, position: "top-32 right-32" },
-    { icon: Palette, delay: 1, position: "bottom-40 left-32" },
-    { icon: Zap, delay: 1.5, position: "bottom-20 right-20" }
+    { icon: Users, delay: 0, position: "top-20 left-20" },
+    { icon: BookOpen, delay: 0.5, position: "top-32 right-32" },
+    { icon: BarChart3, delay: 1, position: "bottom-40 left-32" },
+    { icon: Shield, delay: 1.5, position: "bottom-20 right-20" }
   ];
 
   const stats = [
-    { number: "50+", label: "Projects Delivered" },
-    { number: "25+", label: "Happy Clients" },
-    { number: "24/7", label: "Support" }
-  ];
-
-  const typingText = "Build Your Digital Future with Nexmize";
-
-  const industries = [
-    { id: 'healthcare', label: 'Healthcare', icon: '🏥' },
-    { id: 'ecommerce', label: 'E-commerce', icon: '🛒' },
-    { id: 'fintech', label: 'FinTech', icon: '💳' },
-    { id: 'education', label: 'Education', icon: '📚' }
+    { number: "500+", label: "Institutions Served" },
+    { number: "100K+", label: "Students Managed" },
+    { number: "99.9%", label: "Uptime" }
   ];
 
   return (
     <header className="container-padding py-12 relative overflow-hidden min-h-screen flex items-center">
       {/* Background Elements */}
       <div className="absolute inset-0">
-        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-accent-purple/10 rounded-full blur-3xl animate-pulse"></div>
-        <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-accent-blue/10 rounded-full blur-3xl animate-pulse delay-1000"></div>
-        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-80 h-80 bg-accent-green/5 rounded-full blur-3xl"></div>
+        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-campus-blue/10 rounded-full blur-3xl animate-pulse"></div>
+        <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-campus-green/10 rounded-full blur-3xl animate-pulse delay-1000"></div>
+        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-80 h-80 bg-campus-cyan/5 rounded-full blur-3xl"></div>
       </div>
 
       {/* Floating Icons */}
@@ -63,7 +48,7 @@ const Hero = () => {
           }}
         >
           <div className="w-16 h-16 glass-panel rounded-2xl flex items-center justify-center">
-            <item.icon className="w-8 h-8 text-accent-purple" />
+            <item.icon className="w-8 h-8 text-campus-blue" />
           </div>
         </motion.div>
       ))}
@@ -77,31 +62,31 @@ const Hero = () => {
           transition={{ duration: 0.6 }}
           className="mb-6"
         >
-          <span className="inline-flex items-center gap-2 bg-gradient-to-r from-accent-purple to-accent-blue text-white px-6 py-2 rounded-full text-sm font-medium shadow-lg">
-            <Zap className="w-4 h-4" />
-            #1 Software Development Agency
+          <span className="inline-flex items-center gap-2 bg-gradient-to-r from-campus-blue to-campus-green text-white px-6 py-2 rounded-full text-sm font-medium shadow-lg">
+            <Shield className="w-4 h-4" />
+            Trusted Educational ERP Platform
           </span>
         </motion.div>
 
         {/* Heading */}
         <motion.h1 
-          className="heading-xl mb-8 bg-gradient-to-r from-primary via-accent-purple to-accent-blue bg-clip-text text-transparent"
+          className="heading-xl mb-8 gradient-text"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
         >
-          {typingText}
+          Smart ERP Platform for Modern Campuses
         </motion.h1>
 
         {/* Description */}
         <motion.p 
-          className="text-xl text-neutral-600 mb-12 max-w-3xl mx-auto leading-relaxed"
+          className="text-xl text-campus-gray mb-12 max-w-3xl mx-auto leading-relaxed"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.4 }}
         >
-          Transform your business with cutting-edge web applications, mobile apps (Android & iOS), 
-          stunning websites, and exceptional UI/UX designs. We deliver digital excellence that drives results.
+          Manage admissions, academics, finance, and more – all in one comprehensive dashboard. 
+          Streamline your institution's operations with our intelligent ERP solution.
         </motion.p>
 
         {/* Stats Section */}
@@ -113,37 +98,13 @@ const Hero = () => {
         >
           {stats.map((stat, index) => (
             <div key={stat.label} className="glass-panel px-6 py-4 rounded-2xl">
-              <div className="text-2xl font-bold text-accent-purple mb-1">{stat.number}</div>
-              <div className="text-sm text-neutral-600">{stat.label}</div>
+              <div className="text-2xl font-bold text-campus-blue mb-1">{stat.number}</div>
+              <div className="text-sm text-campus-gray">{stat.label}</div>
             </div>
           ))}
         </motion.div>
 
-        {/* Industry Selection for Personalization */}
-        {!preferences.industry && (
-          <motion.div
-            className="mb-8"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.7 }}
-          >
-            <p className="text-sm text-neutral-600 mb-4">What industry are you in?</p>
-            <div className="flex flex-wrap justify-center gap-3">
-              {industries.map((industry) => (
-                <button
-                  key={industry.id}
-                  onClick={() => handleIndustrySelect(industry.id)}
-                  className="flex items-center gap-2 px-4 py-2 glass-panel rounded-full hover:shadow-lg transition-all duration-300 text-sm font-medium"
-                >
-                  <span>{industry.icon}</span>
-                  {industry.label}
-                </button>
-              ))}
-            </div>
-          </motion.div>
-        )}
-
-        {/* Enhanced CTAs */}
+        {/* CTAs */}
         <motion.div 
           className="flex flex-col sm:flex-row justify-center gap-4 mb-8"
           initial={{ opacity: 0, y: 20 }}
@@ -152,38 +113,38 @@ const Hero = () => {
         >
           <button 
             onClick={() => scrollToSection('contact')}
-            className="group bg-gradient-to-r from-accent-purple to-accent-blue text-white px-8 py-4 rounded-xl font-semibold hover:shadow-xl transition-all duration-300 flex items-center justify-center gap-2"
+            className="button-primary"
           >
-            Start Your Project
-            <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+            Schedule a Demo
+            <ArrowRight className="w-5 h-5 ml-2" />
           </button>
           <button 
-            onClick={() => scrollToSection('portfolio')}
-            className="glass-panel px-8 py-4 rounded-xl font-medium hover:shadow-xl transition-all duration-300 flex items-center justify-center gap-2 group"
+            onClick={() => scrollToSection('features')}
+            className="button-secondary"
           >
-            View Our Work
-            <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+            Explore Features
+            <ArrowRight className="w-5 h-5 ml-2" />
           </button>
         </motion.div>
 
         {/* Trust Indicators */}
         <motion.div
-          className="flex flex-wrap justify-center items-center gap-6 text-sm text-neutral-500"
+          className="flex flex-wrap justify-center items-center gap-6 text-sm text-campus-gray"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.8, delay: 1 }}
         >
           <div className="flex items-center gap-2">
-            <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
-            Available for new projects
+            <div className="w-2 h-2 bg-campus-green rounded-full animate-pulse"></div>
+            Cloud-based Solution
           </div>
           <div className="flex items-center gap-2">
-            <div className="w-2 h-2 bg-blue-400 rounded-full animate-pulse"></div>
-            24h response time
+            <div className="w-2 h-2 bg-campus-blue rounded-full animate-pulse"></div>
+            Mobile & Web Access
           </div>
           <div className="flex items-center gap-2">
-            <div className="w-2 h-2 bg-purple-400 rounded-full animate-pulse"></div>
-            Free consultation
+            <div className="w-2 h-2 bg-campus-cyan rounded-full animate-pulse"></div>
+            Free Demo Available
           </div>
         </motion.div>
       </div>

@@ -6,52 +6,52 @@ import { Mail, Phone, MapPin, ArrowRight } from "lucide-react";
 const Footer = () => {
   const footerSections = [
     {
-      title: "Services",
+      title: "Product",
       links: [
-        { name: "Web Applications", href: "#services" },
-        { name: "Mobile Apps", href: "#services" },
-        { name: "Business Websites", href: "#services" },
-        { name: "UI/UX Design", href: "#services" }
+        { name: "Features", href: "#features" },
+        { name: "Dashboard", href: "#features" },
+        { name: "Mobile App", href: "#features" },
+        { name: "Integrations", href: "#features" }
       ]
     },
     {
-      title: "Company",
+      title: "Solutions",
       links: [
-        { name: "About Us", href: "#about" },
-        { name: "Our Work", href: "#portfolio" },
-        { name: "Careers", href: "/careers", isExternal: true },
-        { name: "Contact", href: "#contact" }
+        { name: "For Schools", href: "#about" },
+        { name: "For Colleges", href: "#about" },
+        { name: "For Universities", href: "#about" },
+        { name: "For Institutes", href: "#about" }
       ]
     },
     {
       title: "Support",
       links: [
-        { name: "Get Quote", href: "#contact" },
-        { name: "Support Center", href: "#contact" },
-        { name: "Privacy Policy", href: "/privacy-policy", isExternal: true },
-        { name: "Terms of Service", href: "/terms-of-service", isExternal: true }
+        { name: "Get Demo", href: "#contact" },
+        { name: "Help Center", href: "#contact" },
+        { name: "Documentation", href: "/docs", isExternal: true },
+        { name: "Training", href: "/training", isExternal: true }
       ]
     }
   ];
 
   const contactInfo = [
-    { icon: Mail, text: "hello@nexmize.com", href: "mailto:hello@nexmize.com" },
+    { icon: Mail, text: "info@campusnex.com", href: "mailto:info@campusnex.com" },
     { icon: Phone, text: "+1 (555) 123-4567", href: "tel:+15551234567" },
-    { icon: MapPin, text: "San Francisco, CA", href: "#" }
+    { icon: MapPin, text: "Education Tech Hub, CA", href: "#" }
   ];
 
   const socialLinks = [
-    { name: "LinkedIn", href: "#", color: "hover:text-blue-600" },
-    { name: "GitHub", href: "#", color: "hover:text-gray-800" },
-    { name: "Twitter", href: "#", color: "hover:text-blue-400" }
+    { name: "LinkedIn", href: "#", color: "hover:text-campus-blue" },
+    { name: "Twitter", href: "#", color: "hover:text-campus-cyan" },
+    { name: "YouTube", href: "#", color: "hover:text-campus-green" }
   ];
 
   return (
-    <footer className="relative bg-gradient-to-br from-neutral-900 via-neutral-800 to-neutral-900 text-white overflow-hidden">
+    <footer className="relative bg-gradient-to-br from-campus-primary via-neutral-800 to-campus-primary text-white overflow-hidden">
       {/* Background elements */}
       <div className="absolute inset-0">
-        <div className="absolute top-0 left-1/4 w-96 h-96 bg-accent-purple/10 rounded-full blur-3xl"></div>
-        <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-accent-blue/10 rounded-full blur-3xl"></div>
+        <div className="absolute top-0 left-1/4 w-96 h-96 bg-campus-blue/10 rounded-full blur-3xl"></div>
+        <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-campus-green/10 rounded-full blur-3xl"></div>
       </div>
 
       <div className="relative z-10">
@@ -67,19 +67,19 @@ const Footer = () => {
               viewport={{ once: true }}
             >
               <div className="flex items-center gap-4 mb-6">
-                <div className="w-12 h-12 bg-gradient-to-br from-accent-purple to-accent-blue rounded-2xl flex items-center justify-center">
+                <div className="w-12 h-12 bg-gradient-to-br from-campus-blue to-campus-green rounded-2xl flex items-center justify-center">
                   <img 
                     src="/lovable-uploads/215642f8-daaa-441a-8ca1-526fd330cacd.png" 
-                    alt="Nexmize Logo" 
+                    alt="CampusNex Logo" 
                     className="w-8 h-8"
                   />
                 </div>
                 <span className="text-2xl font-bold bg-gradient-to-r from-white to-neutral-300 bg-clip-text text-transparent">
-                  Nexmize
+                  CampusNex
                 </span>
               </div>
               <p className="text-neutral-300 text-lg leading-relaxed mb-8 max-w-md">
-                Professional Software Development Company specializing in Web Applications, Mobile Apps, and UI/UX Design that drives business growth.
+                Smart ERP Platform for Modern Campuses. Streamline your educational institution's operations with our comprehensive management solution.
               </p>
 
               {/* Contact info */}
@@ -94,7 +94,7 @@ const Footer = () => {
                     transition={{ duration: 0.5, delay: index * 0.1 }}
                     viewport={{ once: true }}
                   >
-                    <div className="w-10 h-10 bg-neutral-700/50 rounded-lg flex items-center justify-center group-hover:bg-accent-purple/20 transition-colors">
+                    <div className="w-10 h-10 bg-neutral-700/50 rounded-lg flex items-center justify-center group-hover:bg-campus-blue/20 transition-colors">
                       <contact.icon className="w-5 h-5" />
                     </div>
                     <span>{contact.text}</span>
@@ -158,7 +158,7 @@ const Footer = () => {
                 transition={{ duration: 0.6 }}
                 viewport={{ once: true }}
               >
-                © 2024 Nexmize. All rights reserved. Crafted with ❤️ for amazing businesses.
+                © 2024 CampusNex by Nexmize. All rights reserved. Empowering education through technology.
               </motion.p>
               
               <motion.div 

@@ -1,34 +1,34 @@
 
 import { motion } from "framer-motion";
 import { Card } from "@/components/ui/card";
-import { Award, Coffee, Heart, Lightbulb } from "lucide-react";
+import { Award, Users, Heart, Lightbulb } from "lucide-react";
 
 const AboutUs = () => {
   const stats = [
-    { number: "50+", label: "Projects Completed" },
-    { number: "25+", label: "Happy Clients" },
-    { number: "3+", label: "Years Experience" },
+    { number: "500+", label: "Institutions Served" },
+    { number: "100K+", label: "Students Managed" },
+    { number: "5+", label: "Years Experience" },
     { number: "24/7", label: "Support Available" }
   ];
 
   const team = [
     {
-      name: "Alex Thompson",
-      role: "Lead Developer",
-      image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=300&h=300&fit=crop&crop=face",
-      expertise: "Full-stack Development"
-    },
-    {
-      name: "Maria Garcia",
-      role: "UI/UX Designer",
+      name: "Dr. Sarah Johnson",
+      role: "Product Director",
       image: "https://images.unsplash.com/photo-1494790108755-2616b612b786?w=300&h=300&fit=crop&crop=face",
-      expertise: "Design Systems"
+      expertise: "Educational Technology"
     },
     {
-      name: "David Kim",
-      role: "Mobile Developer",
+      name: "Michael Chen",
+      role: "Lead Developer",
       image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=300&h=300&fit=crop&crop=face",
-      expertise: "React Native"
+      expertise: "ERP Systems"
+    },
+    {
+      name: "Emily Rodriguez",
+      role: "UX Designer",
+      image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=300&h=300&fit=crop&crop=face",
+      expertise: "Educational UX"
     }
   ];
 
@@ -36,22 +36,22 @@ const AboutUs = () => {
     {
       icon: Award,
       title: "Excellence",
-      description: "We strive for perfection in every project we deliver"
+      description: "Delivering the highest quality educational software solutions"
     },
     {
-      icon: Coffee,
+      icon: Users,
       title: "Collaboration",
-      description: "Working closely with clients to achieve their vision"
+      description: "Working closely with educators to build better tools"
     },
     {
       icon: Heart,
       title: "Passion",
-      description: "We love what we do and it shows in our work"
+      description: "Dedicated to transforming education through technology"
     },
     {
       icon: Lightbulb,
       title: "Innovation",
-      description: "Always exploring new technologies and solutions"
+      description: "Continuously improving and evolving our platform"
     }
   ];
 
@@ -63,10 +63,10 @@ const AboutUs = () => {
   };
 
   return (
-    <section id="about" className="py-24 bg-gradient-to-br from-neutral-50 via-accent-purple/5 to-accent-green/5 relative overflow-hidden">
+    <section id="about" className="py-24 bg-gradient-to-br from-campus-light via-campus-blue/5 to-campus-green/5 relative overflow-hidden">
       {/* Background blur elements */}
-      <div className="absolute top-0 right-0 w-80 h-80 bg-accent-purple/10 rounded-full blur-3xl translate-x-1/3 -translate-y-1/3"></div>
-      <div className="absolute bottom-0 left-0 w-80 h-80 bg-accent-green/10 rounded-full blur-3xl -translate-x-1/3 translate-y-1/3"></div>
+      <div className="absolute top-0 right-0 w-80 h-80 bg-campus-blue/10 rounded-full blur-3xl translate-x-1/3 -translate-y-1/3"></div>
+      <div className="absolute bottom-0 left-0 w-80 h-80 bg-campus-green/10 rounded-full blur-3xl -translate-x-1/3 translate-y-1/3"></div>
       
       <div className="container-padding relative z-10">
         {/* About Content */}
@@ -77,18 +77,18 @@ const AboutUs = () => {
             transition={{ duration: 0.5 }}
             viewport={{ once: true }}
           >
-            <span className="bg-accent-green/10 text-accent-green px-4 py-1.5 rounded-full text-sm font-medium">
-              ABOUT NEXMIZE
+            <span className="bg-campus-green/10 text-campus-green px-4 py-1.5 rounded-full text-sm font-medium">
+              ABOUT CAMPUSNEX
             </span>
-            <h2 className="heading-lg mt-6 mb-6">Building Digital Excellence Since Day One</h2>
-            <p className="text-neutral-600 mb-6 text-large">
-              At Nexmize, we're passionate about transforming ideas into powerful digital solutions. Our team of experienced developers, designers, and strategists work together to deliver exceptional web applications, mobile apps, and business websites that drive real results.
+            <h2 className="heading-lg mt-6 mb-6">Transforming Education Through Smart Technology</h2>
+            <p className="text-campus-gray mb-6 text-large">
+              CampusNex is a comprehensive ERP solution designed specifically for educational institutions. We understand the unique challenges schools and colleges face in managing complex operations, from admissions to graduation.
             </p>
-            <p className="text-neutral-600 mb-8">
-              We believe in the power of technology to transform businesses and improve lives. That's why we're committed to staying at the forefront of digital innovation, using the latest tools and techniques to deliver solutions that are not just functional, but truly exceptional.
+            <p className="text-campus-gray mb-8">
+              Our platform brings together all aspects of institutional management into one intuitive dashboard, enabling educators to focus on what matters most – providing quality education and nurturing student growth.
             </p>
             <button onClick={scrollToContact} className="button-primary">
-              Work With Us
+              Schedule a Demo
             </button>
           </motion.div>
 
@@ -100,8 +100,8 @@ const AboutUs = () => {
           >
             <Card className="glass-panel p-8 rounded-3xl">
               <img 
-                src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=800&h=600&fit=crop"
-                alt="Team working"
+                src="https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?w=800&h=600&fit=crop"
+                alt="Educational technology in use"
                 className="w-full h-64 object-cover rounded-xl mb-6"
               />
               <div className="grid grid-cols-2 gap-6">
@@ -114,10 +114,10 @@ const AboutUs = () => {
                     transition={{ duration: 0.3, delay: 0.4 + index * 0.1 }}
                     viewport={{ once: true }}
                   >
-                    <div className="text-3xl font-bold bg-gradient-to-r from-accent-purple to-accent-blue bg-clip-text text-transparent mb-1">
+                    <div className="text-3xl font-bold gradient-text mb-1">
                       {stat.number}
                     </div>
-                    <div className="text-sm text-neutral-600">{stat.label}</div>
+                    <div className="text-sm text-campus-gray">{stat.label}</div>
                   </motion.div>
                 ))}
               </div>
@@ -135,8 +135,8 @@ const AboutUs = () => {
         >
           <div className="text-center mb-12">
             <h3 className="heading-md mb-4">Meet Our Team</h3>
-            <p className="text-neutral-600 max-w-2xl mx-auto">
-              Our talented team of designers and developers brings years of experience and passion to every project.
+            <p className="text-campus-gray max-w-2xl mx-auto">
+              Our dedicated team of education technology experts is committed to creating solutions that truly serve the educational community.
             </p>
           </div>
 
@@ -157,12 +157,12 @@ const AboutUs = () => {
                       className="w-24 h-24 rounded-full mx-auto object-cover border-4 border-white shadow-lg group-hover:scale-105 transition-transform duration-300"
                     />
                     <div className="absolute -bottom-2 left-1/2 transform -translate-x-1/2">
-                      <div className="w-4 h-4 bg-green-400 rounded-full border-2 border-white animate-pulse"></div>
+                      <div className="w-4 h-4 bg-campus-green rounded-full border-2 border-white animate-pulse"></div>
                     </div>
                   </div>
                   <h4 className="font-bold text-lg mb-1">{member.name}</h4>
-                  <p className="text-accent-purple font-medium mb-2">{member.role}</p>
-                  <p className="text-sm text-neutral-600">{member.expertise}</p>
+                  <p className="text-campus-blue font-medium mb-2">{member.role}</p>
+                  <p className="text-sm text-campus-gray">{member.expertise}</p>
                 </Card>
               </motion.div>
             ))}
@@ -178,8 +178,8 @@ const AboutUs = () => {
         >
           <div className="text-center mb-12">
             <h3 className="heading-md mb-4">Our Values</h3>
-            <p className="text-neutral-600 max-w-2xl mx-auto">
-              These core principles guide everything we do and shape the way we work with our clients.
+            <p className="text-campus-gray max-w-2xl mx-auto">
+              These core principles guide our mission to transform educational institutions through innovative technology.
             </p>
           </div>
 
@@ -193,11 +193,11 @@ const AboutUs = () => {
                 viewport={{ once: true }}
               >
                 <Card className="glass-panel p-6 rounded-2xl text-center hover:shadow-lg transition-all duration-300 group">
-                  <div className="w-12 h-12 bg-gradient-to-r from-accent-purple to-accent-blue rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
+                  <div className="w-12 h-12 bg-gradient-to-r from-campus-blue to-campus-green rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
                     <value.icon className="w-6 h-6 text-white" />
                   </div>
                   <h4 className="font-bold mb-2">{value.title}</h4>
-                  <p className="text-sm text-neutral-600">{value.description}</p>
+                  <p className="text-sm text-campus-gray">{value.description}</p>
                 </Card>
               </motion.div>
             ))}
