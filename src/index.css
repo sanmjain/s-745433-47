@@ -6,14 +6,14 @@
 @layer base {
   :root {
     --background: 0 0% 100%;
-    --foreground: 20 33% 8%;
-    --border: 24 2% 91%;
-    --input: 24 2% 91%;
-    --ring: 24 5% 64%;
+    --foreground: 213 31% 23%;
+    --border: 214 32% 91%;
+    --input: 214 32% 91%;
+    --ring: 213 12% 64%;
   }
 
   body {
-    @apply bg-neutral-100 text-primary font-sans antialiased;
+    @apply bg-campus-light text-campus-primary font-sans antialiased;
     line-height: 1.6;
   }
 
@@ -23,7 +23,7 @@
 
   /* Enhanced Typography */
   h1, h2, h3, h4, h5, h6 {
-    @apply font-bold;
+    @apply font-semibold;
     line-height: 1.2;
     letter-spacing: -0.02em;
   }
@@ -35,7 +35,7 @@
 
 @layer components {
   .glass-panel {
-    @apply backdrop-blur-sm bg-white/80 border border-white/20 shadow-lg;
+    @apply backdrop-blur-sm bg-white/90 border border-white/30 shadow-lg;
   }
   
   .container-padding {
@@ -44,7 +44,7 @@
 
   /* Enhanced Typography Classes */
   .heading-xl {
-    @apply text-4xl md:text-5xl lg:text-7xl font-bold tracking-tight;
+    @apply text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight;
     line-height: 1.1;
     letter-spacing: -0.02em;
   }
@@ -56,7 +56,7 @@
   }
 
   .heading-md {
-    @apply text-2xl md:text-3xl font-bold tracking-tight;
+    @apply text-2xl md:text-3xl font-semibold tracking-tight;
     line-height: 1.3;
   }
 
@@ -65,9 +65,9 @@
     line-height: 1.6;
   }
 
-  /* Enhanced Button Styles */
+  /* CampusNex Button Styles */
   .button-primary {
-    @apply px-8 py-4 bg-gradient-to-r from-accent-purple to-accent-blue text-white rounded-xl 
+    @apply px-8 py-4 bg-gradient-to-r from-campus-blue to-campus-cyan text-white rounded-xl 
            hover:shadow-xl transition-all duration-300 transform hover:scale-105
            font-semibold tracking-wide shadow-lg;
   }
@@ -75,19 +75,19 @@
   .button-secondary {
     @apply px-8 py-4 glass-panel rounded-xl 
            hover:shadow-xl transition-all duration-300 transform hover:scale-105
-           font-semibold tracking-wide border border-white/30
-           hover:bg-white/90;
+           font-semibold tracking-wide border border-campus-blue/20
+           hover:bg-white/95 text-campus-primary;
   }
 
   .button-ghost {
-    @apply px-6 py-3 text-neutral-600 hover:text-primary transition-all duration-300
-           font-medium hover:bg-neutral-100/50 rounded-lg;
+    @apply px-6 py-3 text-campus-gray hover:text-campus-primary transition-all duration-300
+           font-medium hover:bg-campus-blue/5 rounded-lg;
   }
 
   /* Card Enhancements */
   .card-interactive {
     @apply glass-panel rounded-2xl p-6 hover:shadow-xl transition-all duration-300 
-           transform hover:scale-105 cursor-pointer group;
+           transform hover:scale-105 cursor-pointer group border border-campus-blue/10;
   }
 
   /* Animation Classes */
@@ -101,7 +101,7 @@
 
   /* Gradient Text */
   .gradient-text {
-    @apply bg-gradient-to-r from-accent-purple via-accent-blue to-accent-green bg-clip-text text-transparent;
+    @apply bg-gradient-to-r from-campus-blue via-campus-cyan to-campus-green bg-clip-text text-transparent;
   }
 }
 
@@ -112,11 +112,11 @@
 
   /* Enhanced Shadows */
   .shadow-soft {
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    box-shadow: 0 4px 20px rgba(30, 41, 59, 0.08);
   }
 
   .shadow-glow {
-    box-shadow: 0 0 20px rgba(137, 137, 222, 0.3);
+    box-shadow: 0 0 20px rgba(14, 165, 233, 0.3);
   }
 
   /* Text Shadow */
@@ -132,14 +132,14 @@
 }
 
 @keyframes glow {
-  from { box-shadow: 0 0 20px rgba(137, 137, 222, 0.3); }
-  to { box-shadow: 0 0 30px rgba(137, 137, 222, 0.5); }
+  from { box-shadow: 0 0 20px rgba(14, 165, 233, 0.3); }
+  to { box-shadow: 0 0 30px rgba(14, 165, 233, 0.5); }
 }
 
 /* Improved Focus States */
 button:focus-visible,
 a:focus-visible {
-  @apply outline-2 outline-offset-2 outline-accent-purple;
+  @apply outline-2 outline-offset-2 outline-campus-blue;
 }
 
 /* Enhanced Scrollbar */
@@ -148,13 +148,13 @@ a:focus-visible {
 }
 
 ::-webkit-scrollbar-track {
-  @apply bg-neutral-100;
+  @apply bg-campus-light;
 }
 
 ::-webkit-scrollbar-thumb {
-  @apply bg-neutral-400 rounded-full;
+  @apply bg-campus-gray/50 rounded-full;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  @apply bg-neutral-500;
+  @apply bg-campus-gray;
 }

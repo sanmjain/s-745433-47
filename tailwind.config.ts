@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -25,31 +26,39 @@ export default {
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
         primary: {
-          DEFAULT: "#141413",
-          foreground: "#FAFAF8",
+          DEFAULT: "#1e293b",
+          foreground: "#FFFFFF",
         },
         secondary: {
-          DEFAULT: "#8989DE",
-          foreground: "#141413",
+          DEFAULT: "#64748b",
+          foreground: "#1e293b",
         },
         neutral: {
-          100: "#FAFAF8",
-          200: "#F0EFEA",
-          300: "#E6E4DD",
-          400: "#C4C3BB",
-          500: "#A3A299",
-          600: "#828179",
-          700: "#605F5B",
-          800: "#3A3935",
+          100: "#f8fafc",
+          200: "#f1f5f9",
+          300: "#e2e8f0",
+          400: "#cbd5e1",
+          500: "#94a3b8",
+          600: "#64748b",
+          700: "#475569",
+          800: "#334155",
         },
         accent: {
-          purple: "#8989DE",
-          blue: "#61AAF2",
-          green: "#7EBF8E",
+          blue: "#0ea5e9",
+          green: "#10b981",
+          cyan: "#06b6d4",
+        },
+        campus: {
+          primary: "#1e293b",
+          blue: "#0ea5e9",
+          green: "#10b981",
+          cyan: "#06b6d4",
+          gray: "#64748b",
+          light: "#f8fafc",
         },
       },
       fontFamily: {
-        sans: ["-apple-system", "BlinkMacSystemFont", "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "sans-serif"],
+        sans: ["Inter", "-apple-system", "BlinkMacSystemFont", "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "sans-serif"],
       },
       animation: {
         "fade-up": "fadeUp 0.5s ease-out forwards",
